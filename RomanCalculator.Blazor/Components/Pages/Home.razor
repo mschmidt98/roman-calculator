@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+<p>
+    <input @bind:event="oninput" @bind:get="inputValue" @bind:set="OnInput" />
+</p>
+
+<p>
+    <code>inputValue</code>: @inputValue
+</p>
+
+@code {
+    private string? inputValue;
+
+    private void OnInput(string value)
+    {
+        var newValue = value ?? string.Empty;
+
+        inputValue = newValue.Length > 4 ? "Long!" : newValue;
+    }
+    
+}
