@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanCalculator.Blazor", "RomanCalculator.Blazor\RomanCalculator.Blazor.csproj", "{6646A1D2-52B4-481E-8707-37FB96B2DA19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanCalculator.Core", "RomanCalculator.Core\RomanCalculator.Core.csproj", "{C4AA7F90-8952-4075-B13C-7C96E3767009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanCalculator.Wpf", "RomanCalculator.Wpf\RomanCalculator.Wpf.csproj", "{F9AED952-0963-492B-A463-C92BDA6F826B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanCalculator.Tests", "RomanCalculator.Tests\RomanCalculator.Tests.csproj", "{A321BFFA-D159-4DDC-859C-D0152941E6F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{6646A1D2-52B4-481E-8707-37FB96B2DA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6646A1D2-52B4-481E-8707-37FB96B2DA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6646A1D2-52B4-481E-8707-37FB96B2DA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AA7F90-8952-4075-B13C-7C96E3767009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AA7F90-8952-4075-B13C-7C96E3767009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AA7F90-8952-4075-B13C-7C96E3767009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AA7F90-8952-4075-B13C-7C96E3767009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9AED952-0963-492B-A463-C92BDA6F826B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9AED952-0963-492B-A463-C92BDA6F826B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9AED952-0963-492B-A463-C92BDA6F826B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9AED952-0963-492B-A463-C92BDA6F826B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A321BFFA-D159-4DDC-859C-D0152941E6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A321BFFA-D159-4DDC-859C-D0152941E6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A321BFFA-D159-4DDC-859C-D0152941E6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A321BFFA-D159-4DDC-859C-D0152941E6F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
