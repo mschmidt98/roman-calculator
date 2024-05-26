@@ -1,22 +1,45 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Mvc
+@using RomanCalculator.Core
+@using RomanCalculator.Core.Contracts
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Roman Calculator</PageTitle>
 <p>
-    <input @bind:event="oninput" @bind:get="inputValue" @bind:set="OnInput" />
+    Input two roman or arabic numbers to add them to each other.
 </p>
 
-<p>
-    <code>inputValue</code>: @inputValue
-</p>
+@* <div style="display: grid; grid-template-columns: 100px auto"> *@
+@*     <p>Value 1:</p> *@
+@*     <InputText @bind-Value="Value1"></InputText> *@
+@*      *@
+@*     <p>Value 2:</p> *@
+@*     <InputText @bind-Value="Value2"></InputText> *@
+@*      *@
+@*     <p>Sum:</p> *@
+@*     <p>@_sum</p> *@
+@* *@
+@*     <p style="column-span: 2; color:  red">@_error</p> *@
+@*      *@
+@*     <div style="display: flex; align-items: flex-end"> *@
+@*         <button @onclick="CalculateNumber">Calculate</button> *@
+@*     </div> *@
+@*      *@
+@* </div> *@
 
 @code {
-    private string? inputValue;
 
-    private void OnInput(string value)
+    private readonly ICalculationService _calculationService = new CalculationService();
+    private string? _sum;
+    private string? _error;
+
+    public string? Value1 { get; set; }
+    public string? Value2 { get; set; }
+
+    private void CalculateNumber()
     {
-        var newValue = value ?? string.Empty;
-
-        inputValue = newValue.Length > 4 ? "Long!" : newValue;
+        _sum = _calculationService.AddNumbers(Value1, Value2, out var error);
+        _error = error;
+        StateHasChanged();
     }
-    
+
 }

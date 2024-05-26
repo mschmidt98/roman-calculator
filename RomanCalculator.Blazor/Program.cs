@@ -1,10 +1,15 @@
-using RomanCalculator.Components;
+using RomanCalculator.Blazor.Components;
+using RomanCalculator.Core;
+using RomanCalculator.Core.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddScoped<ICalculationService, CalculationService>();
+builder.Services.AddScoped<IRomanParsingService, RomanParsingService>();
 
 var app = builder.Build();
 
